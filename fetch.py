@@ -7,10 +7,10 @@ from dotenv import load_dotenv
 
 
 # @ROB TO DO: turn this into OOP, create a Track Class that contains features
+load_dotenv(".env")
 
-CLIENT_ID = os.environ.get("ID")
-CLIENT_SECRET = os.environ.get("SECRET")
-
+CLIENT_ID = os.environ.get('ID')
+CLIENT_SECRET = os.environ.get('SECRET')
 client_credentials_manager = SpotifyClientCredentials(CLIENT_ID, CLIENT_SECRET)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
